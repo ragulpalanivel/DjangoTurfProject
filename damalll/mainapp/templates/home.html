@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id="homeCarousel">
+    {% include 'includes/components/homeCarousel.html' %}
+</section>
+
+<div class="container card-group">
+    {% for turf in turfs %}
+        {% include 'includes/components/turfCard.html' %}
+    {% endfor %}
+</div>
+{% endblock %}

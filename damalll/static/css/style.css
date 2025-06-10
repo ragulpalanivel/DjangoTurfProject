@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  header {
+    z-index: 10;
+    height: 45px;
+    background-color: rgb(255, 255, 255);
+
+    nav {
+      height: 100%;
+    }
+  }
+
+  main {
+    margin-top: 45px;
+
+    /* Home page styling */
+
+    /* carousel */
+    #homeCarousel {
+      height: 400px;
+
+      .carousel {
+        height: 100%;
+
+        .carousel-inner {
+          height: 100%;
+          .carousel-item {
+            height: 100%;
+
+            img {
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+
+    }
+
+    .card-group {
+      display: grid;
+      grid-template-columns: auto auto auto;
+
+      .card {
+        height: 400px;
+        width: 350px;
+        margin-top: 10px;
+
+        img {
+          height: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
