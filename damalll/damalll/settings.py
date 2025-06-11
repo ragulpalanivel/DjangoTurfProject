@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainapp'
+    'mainapp',
+    'authentication'
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #media files -
 MEDIA_ROOT = BASE_DIR/ 'media'
 MEDIA_URL = '/'
+
+# Authentication 
+LOGIN_URL  = 'signup'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
