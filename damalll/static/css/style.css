@@ -9,7 +9,7 @@ body {
   header {
     z-index: 10;
     height: 45px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(9, 9, 9);
 
     nav {
       height: 100%;
@@ -46,15 +46,19 @@ body {
     .card-group {
       display: grid;
       grid-template-columns: auto auto auto;
+      border-radius: 0;
 
       .card {
-        height: 400px;
+        height: 350px;
         width: 350px;
         margin-top: 10px;
+        background-color: rgb(226, 201, 11);
+        border-radius: 0%;
 
         img {
           height: 50%;
           object-fit: cover;
+          border-radius: 0;
         }
       }
     }

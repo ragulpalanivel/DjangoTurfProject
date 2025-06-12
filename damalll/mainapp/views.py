@@ -11,7 +11,14 @@ class HomeView(ListView):
     model = Turf
     context_object_name = 'turfs'
 
-class TurfDetails(DetailView):
-    template_name = 'home.html'
+class AddTurf(CreateView):
+    template_name = 'add_turf.html'
     model = Turf
-    context_object_name = 'turfs'
+    fields ='__all__'
+    success_url = '/'
+
+# class TurfDetails(DetailView):
+#     template_name = 'home.html'
+#     model = Turf
+#     context_object_name = 'turfs'
+
