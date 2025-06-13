@@ -1,10 +1,25 @@
 from django.shortcuts import render
 from .models import Turf
-from django.views.generic import CreateView, ListView, DetailView
+from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
 
-# def home (request):
-#      return render(request, 'base.html')
+# def homeView(request):
+#     template_name = 'home.html'
+#     turfs = Turf.objects.all() 
+#     context = {
+#         'turf_list' : turfs
 
+#     }
+#     return render(request, template_name, context)
+
+def aboutView(request):
+    template_name = 'about.html'
+    context ={}
+    return render(request, template_name, context)
+
+def contactView(request):
+    template_name = 'contact.html'
+    context ={}
+    return render(request, template_name, context)
 
 class HomeView(ListView):
     template_name = 'home.html'
@@ -22,4 +37,5 @@ class TurfDetails(DetailView):
     model = Turf
     context_object_name = 'turf'
     success_url = '/'
+
 

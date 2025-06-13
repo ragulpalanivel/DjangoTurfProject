@@ -9,12 +9,21 @@ body {
   header {
     z-index: 10;
     height: 45px;
-    background-color: rgb(9, 9, 9);
+    background-color: rgb(7, 157, 44);
 
     nav {
       height: 100%;
     }
   }
+
+  .about-section {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0 0 20px rgba(247, 2, 2, 0.1);
+  border-radius: 12px;
+}
 
   main {
     margin-top: 45px;
@@ -43,49 +52,26 @@ body {
 
     }
 
-    .card-group {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      border-radius: 0;
-
-      .card {
-        
-        height: 350px;
-        width: 350px;
-        margin-top: 10px;
-        /* background-color: rgb(226, 201, 11); */
-        border-radius: 5px;
-        overflow: hidden;
-        padding: 0;
-        a {
-          padding: 0;
-          margin: 0;
-        }
-
-        img {
-          /* display: none; */
-          margin: 0;
-          height: 200px;
-          object-fit: cover;
-          border-radius: 0;
-          width: 100%;
-        }
-        .card-body {
-          display: flex;
-          flex-direction: column;
-          .card-title {
-            height: 12px;
-          }
-          .card-text {
-            height: 20px;
-          }
-          div {
-            height: 50px;
-            margin: auto;
-
-          }
-        }
-      }
-    }
+    
   }
 }
+
+.container{
+    .row{
+        .card{
+            height: 350px;
+            .card-img {
+                height: 90%;
+                overflow:hidden ;
+                
+                img { 
+                    object-position: 0px 0px;
+                    height: 100%;
+                    object-fit:cover;
+                }
+            }
+}
+}
+}
+
+        

@@ -7,9 +7,15 @@
 </section>
 
 
-<div class="container card-group">
+<div class="container mt-5 pt-5">
+     <h2 class="mb-4">Our Turf's</h2>
+     <div class="row">
+
     {% for turf in turfs %}
         {% include 'includes/components/turfCard.html' %}
     {% endfor %}
 </div>
+</div>
+
+
 {% endblock %}

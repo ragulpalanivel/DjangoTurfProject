@@ -1,14 +1,32 @@
+{% load static %}
 
-<div class="card">
-  <a href="{% url 'turf_detail' turf.id %}" class="w-100">
-  <img src="{{turf.image.url}}" class="card-img-top" alt="...">
-</a>
-  <div class="card-body">
-    <h5 class="card-title">{{turf.name}}</h5>
-    <p class="card-text my-2">{{turf.description}}</p>
-    <p class="card-text">{{turf.price}}</p>
-    <div class="">
-    <a href="#" class="btn btn-warning">Book Now</a>
-    </div>
-  </div>
-</div>
+    
+        <div class="col-md-3 mb-4">
+        
+            <div class="card">
+                
+                <div class="card-img">
+                    <a href="{% url 'turf_detail' turf.id %}">
+                        <img src="{{ turf.image.url }}" class="card-img-top" alt="Turf Image">
+                     </a>
+                </div>
+                
+                
+                
+                <div class="card-body row align-items-center">
+                    <div class="col">
+                    <h5 class="card-title">{{turf.name}}</h5>
+                    <p class="card-text my-2">{{turf.description}}</p>
+                    <p class="card-text">{{turf.price}}</p>
+
+                    </div>
+         
+                    <div class="col .fs-6 text">
+                        <a href="#" class="btn btn-danger btn-sm ">Book</a>
+                
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
