@@ -3,7 +3,7 @@ from .models import Turf
 from django.views.generic import CreateView, ListView, DetailView
 
 # def home (request):
-#     return render(request, 'base.html')
+#      return render(request, 'base.html')
 
 
 class HomeView(ListView):
@@ -17,8 +17,9 @@ class AddTurf(CreateView):
     fields ='__all__'
     success_url = '/'
 
-# class TurfDetails(DetailView):
-#     template_name = 'home.html'
-#     model = Turf
-#     context_object_name = 'turfs'
+class TurfDetails(DetailView):
+    template_name = 'turf_detail.html'
+    model = Turf
+    context_object_name = 'turf'
+    success_url = '/'
 

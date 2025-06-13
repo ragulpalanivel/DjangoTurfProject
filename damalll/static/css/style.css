@@ -49,16 +49,41 @@ body {
       border-radius: 0;
 
       .card {
+        
         height: 350px;
         width: 350px;
         margin-top: 10px;
-        background-color: rgb(226, 201, 11);
-        border-radius: 0%;
+        /* background-color: rgb(226, 201, 11); */
+        border-radius: 5px;
+        overflow: hidden;
+        padding: 0;
+        a {
+          padding: 0;
+          margin: 0;
+        }
 
         img {
-          height: 50%;
+          /* display: none; */
+          margin: 0;
+          height: 200px;
           object-fit: cover;
           border-radius: 0;
+          width: 100%;
+        }
+        .card-body {
+          display: flex;
+          flex-direction: column;
+          .card-title {
+            height: 12px;
+          }
+          .card-text {
+            height: 20px;
+          }
+          div {
+            height: 50px;
+            margin: auto;
+
+          }
         }
       }
     }

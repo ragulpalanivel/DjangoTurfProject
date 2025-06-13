@@ -1,11 +1,13 @@
 
 <div class="card">
-  <img src="{{turf.image}}" class="card-img-top" alt="...">
+  <a href="{% url 'turf_detail' turf.id %}" class="w-100">
+  <img src="{{turf.image.url}}" class="card-img-top" alt="...">
+</a>
   <div class="card-body">
     <h5 class="card-title">{{turf.name}}</h5>
-    <p class="card-text">{{turf.description}}</p>
+    <p class="card-text my-2">{{turf.description}}</p>
     <p class="card-text">{{turf.price}}</p>
-    <div class="align-item-center">
+    <div class="">
     <a href="#" class="btn btn-warning">Book Now</a>
     </div>
   </div>
