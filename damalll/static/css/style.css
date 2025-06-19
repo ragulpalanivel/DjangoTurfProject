@@ -17,7 +17,7 @@ body {
   }
 
   .about-section {
-  background-color: #ffffff;
+  background-color: #a10707;
   padding: 40px 20px;
   max-width: 1000px;
   margin: 40px auto;
@@ -55,8 +55,20 @@ body {
     
   }
 }
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+.card-img-top:hover {
+    transform: scale(1.03);
+}
 
-.container{
+.contact-container:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.2);
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
+/* .container{
     .row{
         .card{
             height: 350px;
@@ -69,9 +81,10 @@ body {
                     height: 100%;
                     object-fit:cover;
                 }
-            }
+            } */
+
+/* }
 }
-}
-}
+} */
 
         

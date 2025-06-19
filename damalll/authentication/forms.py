@@ -36,7 +36,13 @@ class CustomRegistrationForm(UserCreationForm):
             }
         )
     )
-
+    
+class OTPForm(forms.Form):
+    otp = forms.CharField(
+        label="Enter OTP",
+        max_length=6,
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter the OTP'})
+    )
 
 
 class CustomLoginForm(AuthenticationForm):

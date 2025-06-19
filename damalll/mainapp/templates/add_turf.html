@@ -7,7 +7,7 @@
 
 {% block content %}
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <form method="post" class="form-control w-50 bg-dark text-light m-auto" enctype="multipart/form-data">
         {% csrf_token %}
         
@@ -22,5 +22,31 @@
 
         <button type="submit" class="btn btn-primary" >Add Turf</button>
     </form>
+</div> -->
+<div class="container py-5">
+    <form method="post" class="form-control bg-dark text-light mx-auto p-4 shadow" style="max-width: 600px;" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <h3 class="text-center mb-4">Add Turf</h3>
+
+        {% for field in form %}
+        <div class="mb-3 row align-items-center">
+            <label for="{{ field.id_for_label }}" class="col-sm-4 col-form-label text-capitalize">
+                {{ field.label }}
+            </label>
+            <div class="col-sm-8">
+                {{ field }}
+                {% if field.errors %}
+                    <div class="text-danger small">{{ field.errors }}</div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary px-4">Add Turf</button>
+        </div>
+    </form>
 </div>
+
 {% endblock %}

@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainapp',
-    'authentication'
+    'authentication',
+    'booking',
+    # 'payments',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +135,6 @@ MEDIA_URL = '/'
 LOGIN_URL  = 'signup'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+RAZORPAY_KEY_ID = 'rzp_test_X9Gi1SoQ34Ztny'
+RAZORPAY_KEY_SECRET = 'Xa4OVYgzJt4dB7xocy0AUMfx'
