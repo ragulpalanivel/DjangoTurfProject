@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card mx-auto my-5 w-50">
+  <h2>Book {{ turf.name }}</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-outline-primary">Book Now</button>
+  </form>
+
+</section>
+
+{% endblock %}

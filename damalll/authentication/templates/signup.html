@@ -10,14 +10,9 @@ Sign Up
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Sign Up</button>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
     </form>
 
 </div>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Register</button>
-</form>
 
 {% endblock %}

@@ -1,17 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
-from mainapp.models import Turf
-
-
-from django.db import models
-from django.contrib.auth.models import User
 from django.utils import timezone
-from mainapp.models import Bike
+from mainapp.models import Turf
 
 class Booking(models.Model):
     STATUS_CHOICES = [
         ('booked', 'Booked'),
-        ('ongoing', 'Ongoing'),
+        ('processing', 'Processing'),
         ('completed', 'Completed'),
         ('cancelled', 'Cancelled'),
     ]
@@ -29,7 +24,7 @@ class Booking(models.Model):
         ('11:00-12:00 AM', '11:00-12:00 AM'),
         ('12:00-01:00 AM', '12:00-01:00 AM'),
         ('01:00-02:00 AM', '01:00-02:00 AM'),
-]
+    ]
     
     SPORT_CHOICES = [
         ('CRICKET', 'Cricket'),
@@ -39,10 +34,10 @@ class Booking(models.Model):
     
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     turf = models.ForeignKey(Turf, on_delete=models.CASCADE)
-    booking_date = models.DateTimeField(auto_now_add=True)
-    time_slot = models.CharField(max_length=20, choices=TIME_SLOTS)
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='ongoing')
-    created_at = models.DateTimeField(auto_now_add=True)
+    booking_date = models.DateTimeField()
+    time_slot = models.CharField(max_length=30, choices=TIME_SLOTS)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='processing')
+    created_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-         return f"{self.user.username} - {self.turf.name} at {self.time_slot}"
+        return f"{self.user.username} - {self.turf.name} at {self.time_slot}"
