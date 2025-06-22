@@ -11,7 +11,10 @@
           <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
         </li> -->
         <li class="nav-item">
-          <a class="nav-link active" href="{% url 'aboutpage' %}">ABOUT</a>
+          <a class="nav-link active card-text fw-bold text-dark mb-0" href="{% url 'homepage' %}">DAMALL TURF'S</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active " href="{% url 'aboutpage' %}">ABOUT</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="{% url 'contactpage' %}">CONTACT US</a>
@@ -45,22 +48,27 @@
           </li>
           {% endif %}
         {% endif %}
+        
         </ul>
         <!-- Auth links end -->
         <!-- Location Search Bar -->
-        <!-- <div class="ms-auto"></div>
-       <form class="d-flex ms-5" role="search">
+         {% if search_bar %}
+        <div class="ms-auto"></div>
+       <form class="d-flex ms-5" role="search" role="search" method="get" action="{% url 'search' %}">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search Turf..." aria-label="Search location">
-          <button class="btn btn-dark" type="submit">SEARCH</button>
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="search_text" value="{{query}}">
+          <button class="btn btn-secondary" type="submit">SEARCH</button>
         </div>
-       </form> -->
-      
-
+       </form>
+       {% endif %}
+       
       <!-- <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form> -->
+
+
+
     </div>
   </div>
 </nav>

@@ -1,19 +1,20 @@
 {% extends 'base.html' %}
 
 {% block title %}
- Turf | Search results for {{query}}
+
 {% endblock %}
 
 {% block content %}
 
-<span>Search results for : {{query}}</span>
 
-<div class="container-fluid product-container">
-    {% for product in products %}
-        <!-- Product Card -->
-         {% include 'includes/components/turfCard.html' %}
 
+<div class="container mt-5 pt-5">
+     <h2 class="mb-4"> Turf | Search results for {{query}}</h2>
+     <div class="row">
+
+    {% for turf in turfs %}
+        {% include 'includes/components/turfCard.html' %}
     {% endfor %}
 </div>
-
+</div>
 {% endblock %}

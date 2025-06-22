@@ -29,6 +29,11 @@ class HomeView(ListView):
     model = Turf
     context_object_name = 'turfs'
 
+    def get_context_data(self, **kwargs):
+        context =super().get_context_data(**kwargs)
+        context['search_bar'] = True 
+        return context
+
 class AddTurf(CreateView):
     template_name = 'add_turf.html'
     model = Turf
@@ -41,17 +46,17 @@ class TurfDetails(DetailView):
     context_object_name = 'turf'
     success_url = '/'
 
-# def searchView(request):
-#     query = request.GET.get('search_text')
+def searchView(request):
+    query = request.GET.get('search_text')
 
-#     result_products = Turf.objects.filter(name__icontains = query)
-#     context =  {
-#         'turfs' : result_turfs,
-#         'query' : query,
-#         'search_bar' : True
-#     }
+    result_turfs = Turf.objects.filter(name__icontains = query)
+    context =  {
+        'turfs' : result_turfs,
+        'query' : query,
+        'search_bar' : True
+    }
 
-#     template = loader.get_template('search_results.html')
-#     return HttpResponse(template.render(context, request))
+    template = loader.get_template('search_results.html')
+    return HttpResponse(template.render(context, request))
 
 

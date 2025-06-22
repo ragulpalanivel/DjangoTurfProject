@@ -1,12 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<section class="card mx-auto my-5 w-50">
-  <h2>Book {{ turf.name }}</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-outline-primary">Book Now</button>
-  </form>
+<section class="booking-section d-flex justify-content-center align-items-center">
+  <div class="card booking-card">
+    <div class="card-body">
+      <h2 class="card-title text-center mb-4">Book {{ turf.name }}</h2>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="text-center">
+          <button type="submit" class="btn btn-secondary px-5">Book Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
 
 </section>
 
